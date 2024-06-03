@@ -21,3 +21,9 @@ steps:
      command: 'publish'
      publishWebProjects: true
      workingDirectory: '_work'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: '**/*Tests/*.csproj'
+    testRunTitle: 'mytest'
